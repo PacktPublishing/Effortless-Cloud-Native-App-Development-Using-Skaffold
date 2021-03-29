@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: helloworld
+  name: helloworld
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld
+  strategy: { }
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: helloworld
+    spec:
+      containers:
+        - image: docker.io/hiashish/helloworld
+          name: helloworld
+          resources: { }
+status: { }

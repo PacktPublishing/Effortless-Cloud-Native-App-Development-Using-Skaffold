@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta13
+kind: Config
+metadata:
+  name: skaffold-introduction
+build:
+  artifacts:
+    - image: docker.io/hiashish/skaffold-introduction
+      jib: { }
+deploy:
+  kubectl:
+    manifests:
+      - k8s/mydeployment.yaml
+      - k8s/myservice.yaml

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: skaffold-introduction
+  name: skaffold-introduction
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: skaffold-introduction
+  strategy: { }
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: skaffold-introduction
+    spec:
+      containers:
+        - image: docker.io/hiashish/skaffold-introduction
+          name: skaffold-introduction
+          resources: { }
+status: { }
