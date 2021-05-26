@@ -10,4 +10,4 @@ build:
 deploy:
   kubectl:
     manifests:
-      - target/classes/META-INF/dekorate/kubernetes.yml
+      - k8s/kubernetes.yml
