@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Display air quality data in realtime</title>
+    <link th:href="@{assets/select2-develop/dist/css/select2.css}" th:rel="stylesheet"/>
+    <link th:href="@{assets/select2-bootstrap4-theme-master/dist/select2-bootstrap4.css}" th:rel="stylesheet"/>
+    <link th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} " th:rel="stylesheet"/>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">Breathe - View Real Time Air Quality Data</a>
+        <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-target="#navbarResponsive"
+                data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<div class="container">
+    <!-- <div class="row">
+         <div class="col-md-4 mt-5" th:object="${countryResponse}">
+             <select class="form-control" id="testOrder" name="testOrder">
+                 <option value="">Select Country</option>
+                 <option th:each="countryResponse : ${countryResponse}"
+                         th:text="${countryResponse.code}+' : '+${countryResponse.name}"
+                         th:value="${countryResponse.code}"></option>
+             </select>
+         </div>
+         <button class="btn btn-primary" type="submit">Submit form</button>
+     </div>--><!--
+    <div class="col-md-4 mt-5">
+&lt;!&ndash;
+        <form method="post" th:object="${response}">
+&ndash;&gt;
+            <form action="#" th:action="@{/index}" th:object="${response}" method="post">
+
+            <div class="form-group">
+                <label for="response">Select country</label>
+                <select id="response" class="form-control select2-single">
+                    <option value="">select</option>
+                    <option th:each="response : ${response}"
+                            th:text="${response.code}+' : '+${response.name}"
+                            th:value="${response.code}"></option>
+                </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+                <input type="hidden" th:field="${response.code}" />
+            </form>
+    </div>
+
+</div>-->
+    <div th:if="${ not#lists.isEmpty(response)}">
+        <table class="table table-bordered table-striped" id="example" style="width: -moz-max-content">
+            <tr>
+                <th>Location</th>
+                <th>City</th>
+                <th colspan="30">Measurements</th>
+            </tr>
+            <tr th:each="response : ${response}">
+                <td th:text="${response.location}"></td>
+                <td th:text="${response.city}"></td>
+                <th:block th:each="p : ${response.measurements}">
+                    <td th:text="${p.parameter}"></td>
+
+                    <td th:text="${p.value}+''+${p.unit}"></td>
+
+                </th:block>
+            </tr>
+            <table>
+    </div>
+    <br>
+    <br>
+    <div>
+
+        <table class="table table-bordered" id="example1" style="width: max-content">
+            <tr>
+                <th>AQI</th>
+                <th>Air Pollution Level</th>
+                <th>Health Implications</th>
+                <th>Cautionary Statement (for PM2.5)</th>
+            </tr>
+            <tr bgcolor="green">
+                <td>0-50</td>
+                <td>Good</td>
+                <td>Air quality is considered satisfactory, and air pollution poses little or no risk</td>
+                <td>None</td>
+            </tr>
+            <tr bgcolor="yellow">
+                <td>51-100</td>
+                <td>Moderate</td>
+                <td>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a
+                    very small number of people who are unusually sensitive to air pollution.
+                </td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should limit
+                    prolonged outdoor exertion.
+                </td>
+            </tr>
+            <tr bgcolor="orange">
+                <td>101-150</td>
+                <td>Unhealthy for Sensitive Groups</td>
+                <td>Members of sensitive groups may experience health effects. The general public is not likely to be
+                    affected.
+                </td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should limit
+                    prolonged outdoor exertion.
+                </td>
+            </tr>
+            <tr bgcolor="red">
+                <td>151-200</td>
+                <td>Unhealthy</td>
+                <td>Everyone may begin to experience health effects; members of sensitive groups may experience more
+                    serious health effects.
+                </td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid
+                    prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor
+                    exertion.
+                </td>
+            </tr>
+            <tr bgcolor="purple">
+                <td>201-300</td>
+                <td>Very Unhealthy</td>
+                <td>Health warnings of emergency conditions. The entire population is more likely to be affected.</td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid
+                    prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor
+                    exertion.
+                </td>
+            </tr>
+            <tr bgcolor="darkred">
+                <td>300+</td>
+                <td>Hazardous</td>
+                <td>Health alert: everyone may experience more serious health effects.</td>
+                <td>Everyone should avoid all outdoor exertion.</td>
+            </tr>
+            <table>
+    </div>
+</div>
+</div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{assets/select2-develop/dist/js/select2.full.js}"></script>
+
+<script>
+
+</script>
+
+</body>
+</html>

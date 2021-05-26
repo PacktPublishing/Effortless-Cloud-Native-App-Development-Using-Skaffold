@@ -1,0 +1,10 @@
+com/air/quality/scanner/model/AqiCountryResponse.class
+com/air/quality/scanner/model/Measurement.class
+com/air/quality/scanner/model/AirQualityIndex.class
+META-INF/dekorate/kubernetes.json
+com/air/quality/scanner/model/Location.class
+com/air/quality/scanner/model/Country.class
+com/air/quality/scanner/AirQualityScannerApplication.class
+META-INF/dekorate/kubernetes.yml
+com/air/quality/scanner/controller/AirQualityController.class
+com/air/quality/scanner/model/CountryResponse.class
