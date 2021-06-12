@@ -1,2 +1,2 @@
 # Effortless-Cloud-Native-Apps-Development-using-Skaffold
-Effortless Cloud-Native Apps Development using Skaffold, published by Packt
+Simplify Build and Deployment of Cloud-Native Spring-Boot Microservices on Kubernetes via Skaffold
