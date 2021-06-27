@@ -26,18 +26,15 @@ public class AirQualityController {
     private static final Logger LOGGER = LoggerFactory.getLogger(AirQualityController.class);
     private RestTemplate restTemplate;
 
-
     @Bean
     private RestTemplate createRestTemplate(RestTemplateBuilder builder) {
         restTemplate = builder.setReadTimeout(Duration.ofSeconds(60)).build();
         return restTemplate;
     }
-
     private AqiCountryResponse getAqiForCountry(String code, String limit, String page, String city) {
         LOGGER.info("URL " + COUNTRY_AQI_END_POINT + "=" + code + "&" + "limit" + "=" + limit + "&" + "page" + "=" + page + "&" + "city" + "=" + city);
         return restTemplate.getForObject(COUNTRY_AQI_END_POINT + "=" + code + "&" + "limit" + "=" + limit + "&" + "page" + "=" + page + "&" + "city" + "=" + city, AqiCountryResponse.class);
     }
-
     @GetMapping
     public String index(@RequestParam(value = "country", required = true, defaultValue = "IN") String country,
                         @RequestParam(value = "limit", required = true, defaultValue = "5") String limit,
@@ -51,6 +48,4 @@ public class AirQualityController {
         model.addAttribute("response", aqiForCountry);
         return "index";
     }
-
-
 }
