@@ -5,8 +5,9 @@ import io.dekorate.kubernetes.annotation.ServiceType;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@KubernetesApplication(serviceType = ServiceType.LoadBalancer)
+
 @SpringBootApplication
+@KubernetesApplication(serviceType = ServiceType.LoadBalancer, replicas = 2, expose = true)
 public class AirQualityScannerApplication {
 
     public static void main(String[] args) {

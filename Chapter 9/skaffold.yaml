@@ -1,4 +1,4 @@
-apiVersion: skaffold/v2beta14
+apiVersion: skaffold/v2beta16
 kind: Config
 metadata:
   name: scanner
@@ -10,4 +10,4 @@ build:
 deploy:
   kubectl:
     manifests:
-      - k8s/kubernetes.yml
+      - target/classes/META-INF/dekorate/kubernetes.yml

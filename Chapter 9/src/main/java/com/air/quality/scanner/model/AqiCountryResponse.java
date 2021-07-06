@@ -9,5 +9,4 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AqiCountryResponse {
     public List<Location> results;
-
 }
