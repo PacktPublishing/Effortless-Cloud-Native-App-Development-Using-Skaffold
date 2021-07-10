@@ -5,8 +5,8 @@
       <configuration>
         <webroots />
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/../Chapter 10/src/main/java" />
-          <root url="file://$MODULE_DIR$/../Chapter 10/src/main/resources" />
+          <root url="file://$MODULE_DIR$/../Chapter09/src/main/java" />
+          <root url="file://$MODULE_DIR$/../Chapter09/src/main/resources" />
         </sourceRoots>
       </configuration>
     </facet>

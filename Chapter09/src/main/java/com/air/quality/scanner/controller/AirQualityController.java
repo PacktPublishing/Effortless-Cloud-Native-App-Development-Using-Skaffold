@@ -32,6 +32,7 @@ public class AirQualityController {
         return restTemplate;
     }
     private AqiCountryResponse getAqiForCountry(String code, String limit, String page, String city) {
+        LOGGER.info("Hiiiiii");
         LOGGER.info("URL " + COUNTRY_AQI_END_POINT + "=" + code + "&" + "limit" + "=" + limit + "&" + "page" + "=" + page + "&" + "city" + "=" + city);
         return restTemplate.getForObject(COUNTRY_AQI_END_POINT + "=" + code + "&" + "limit" + "=" + limit + "&" + "page" + "=" + page + "&" + "city" + "=" + city, AqiCountryResponse.class);
     }

@@ -17,10 +17,10 @@
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
     <modules>
-        <module>Chapter 1</module>
-        <module>Chapter 2</module>
-        <module>Chapter 3</module>
-        <module>Chapter 10</module>
+        <module>Chapter01</module>
+        <module>Chapter02</module>
+        <module>Chapter03</module>
+        <module>Chapter09</module>
 
     </modules>
 
