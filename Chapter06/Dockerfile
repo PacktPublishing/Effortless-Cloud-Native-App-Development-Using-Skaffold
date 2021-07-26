@@ -2,7 +2,7 @@ FROM maven:3-adoptopenjdk-16 as build
 RUN mkdir /app
 COPY . /app
 WORKDIR /app
-RUN mvn clean package -DskipTests
+RUN mvn clean verify -DskipTests
 
 FROM adoptopenjdk:16-jre
 RUN mkdir /project

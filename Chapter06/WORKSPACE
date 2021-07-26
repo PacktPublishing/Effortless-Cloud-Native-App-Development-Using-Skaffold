@@ -1,0 +1,19 @@
+workspace(name = "gke_bazel_example")
+# Instantiate the Bazel rule "repositories" in rules_docker/java as "_java_image_repos"
+# See https://github.com/bazelbuild/rules_docker/blob/master/java/image.bzl#L43
+load(
+    "@io_bazel_rules_docker//java:image.bzl",
+    _java_image_repos = "repositories",
+    )
+
+# Download dependencies for running Java image Bazel rules
+_java_image_repos()
+# Load the "generated_maven_jars" Bazel rule from our local repo in
+# "java-spring-boot/third_party/generate_workspace.bzl"
+# This is from https://docs.bazel.build/versions/master/generate-workspace.html
+# See DEVELOPER.md for the different method of migrating Maven dependencies to Bazel
+load("//java-spring-boot/third_party:generate_workspace.bzl", "generated_maven_jars")
+
+# Loads maven jars listed in java-spring-boot/third_party/generate_workspace.bzl
+# to make them available as dependencies in our Java build
+generated_maven_jars()

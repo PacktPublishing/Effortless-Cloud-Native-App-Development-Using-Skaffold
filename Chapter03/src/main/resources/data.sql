@@ -19,7 +19,7 @@ VALUES ('Himachal Pradesh', 'Shimla');
 INSERT INTO States
 VALUES ('Jharkhand', 'Ranchi');
 INSERT INTO States
-VALUES ('Karnataka', 'Bangalore');
+VALUES ('Karnataka', 'Bengaluru');
 INSERT INTO States
 VALUES ('Kerala', 'Thiruvananthapuram');
 INSERT INTO States

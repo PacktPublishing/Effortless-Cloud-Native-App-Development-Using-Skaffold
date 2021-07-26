@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: skaffold-introduction
   name: skaffold-introduction
@@ -13,7 +12,6 @@ spec:
   strategy: { }
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: skaffold-introduction
     spec:

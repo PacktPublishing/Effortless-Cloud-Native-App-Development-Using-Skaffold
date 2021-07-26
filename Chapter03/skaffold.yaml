@@ -6,8 +6,29 @@ build:
   artifacts:
     - image: docker.io/hiashish/skaffold-introduction
       jib: { }
+  tagPolicy:
+    sha256: { }
 deploy:
   kubectl:
     manifests:
       - k8s/mydeployment.yaml
       - k8s/myservice.yaml
+profiles:
+  - name: test
+    test:
+      - image: docker.io/hiashish/skaffold-introduction
+        custom:
+          - command: mvn test -Dmaven.test.skip=false
+  - name: sync
+    build:
+      artifacts:
+        - image: docker.io/hiashish/skaffold-introduction
+          jib: { }
+          sync:
+            auto: true
+  - name: docker
+    build:
+      artifacts:
+        - image: docker.io/hiashish/skaffold-introduction
+          docker:
+            dockerfile: Dockerfile

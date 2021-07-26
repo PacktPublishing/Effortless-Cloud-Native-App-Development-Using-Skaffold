@@ -20,7 +20,7 @@ public class StateController {
 
     @GetMapping("/states")
     private List<State> getAllStates() {
-        LOGGER.info("Getting all states.");
+        LOGGER.info("Getting all Indian states and their capitals.");
         return stateService.findAll();
     }
 
