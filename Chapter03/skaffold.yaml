@@ -1,4 +1,4 @@
-apiVersion: skaffold/v2beta16
+apiVersion: skaffold/v2beta19
 kind: Config
 metadata:
   name: skaffold-introduction
@@ -23,9 +23,9 @@ profiles:
     build:
       artifacts:
         - image: docker.io/hiashish/skaffold-introduction
-          jib: { }
           sync:
             auto: true
+          jib: { }
   - name: docker
     build:
       artifacts:

@@ -62,8 +62,8 @@
 					</image>
 					<docker>
 						<publishRegistry>
-							<username>hiashish</username>
-							<password>nokia@123</password>
+							<username>username</username>
+							<password>password</password>
 							<url>https://registry.hub.docker.com/</url>
 							<email>user@example.com</email>
 						</publishRegistry>
@@ -78,6 +78,9 @@
 					<from>
 						<image>docker.io/adoptopenjdk/openjdk16:jre-16.0.1_9-alpine</image>
 					</from>
+					<!--<to>
+						<image>docker.io/hiashish/reactive-web-app</image>
+					</to>-->
 				</configuration>
 			</plugin>
 		</plugins>
