@@ -31,7 +31,7 @@ VALUES ('Manipur', 'Imphal');
 INSERT INTO States
 VALUES ('Meghalaya', 'Shillong');
 INSERT INTO States
-VALUES ('Mizoram', 'Aizawi');
+VALUES ('Mizoram', 'Aizawl');
 INSERT INTO States
 VALUES ('Nagaland', 'Kohima');
 INSERT INTO States
@@ -47,7 +47,7 @@ VALUES ('Telangana', 'Hyderabad');
 INSERT INTO States
 VALUES ('Tripura', 'Agartala');
 INSERT INTO States
-VALUES ('Uttaranchal', 'Dehradun');
+VALUES ('Uttarakhand', 'Dehradun');
 INSERT INTO States
 VALUES ('Uttar Pradesh', 'Lucknow');
 INSERT INTO States
