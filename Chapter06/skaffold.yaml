@@ -9,9 +9,9 @@ build:
         args:
           - -DskipTests
 deploy:
-  kubectl:
-    manifests:
-      - k8s/manifest.yaml
+  kustomize:
+    paths:
+      - kustomization/base
 profiles:
   - name: userDefinedPortForward
     portForward:
@@ -39,17 +39,7 @@ profiles:
             cacheFrom:
               - reactive-web-app
       googleCloudBuild: { }
-  - name: kustomize
-    build:
-      artifacts:
-        - image: reactive-web-app
-          kaniko: { }
-      cluster:
-        pullSecretName: kaniko-secret
-        pullSecretPath: /Users/ashish/Downloads/kaniko-secret.json
-    deploy:
-      kustomize: { }
-  - name: jibWithHelm
+  - name: kustomizeProd
     build:
       artifacts:
         - image: reactive-web-app
@@ -57,14 +47,35 @@ profiles:
             args:
               - -DskipTests
     deploy:
+      kustomize:
+        paths:
+          - kustomization/overlays/prod
+  - name: kustomizeBase
+    deploy:
+      kustomize:
+        paths:
+          - kustomization/base
+  - name: kustomizeDev
+    deploy:
+      kustomize:
+        paths:
+          - kustomization/overlays/dev
+  - name: jibWithHelm
+    build:
+      artifacts:
+        - image: gcr.io/basic-curve-316617/reactive-web-app-helm
+          jib:
+            args:
+              - -DskipTests
+    deploy:
       helm:
         releases:
-          - name: reactive-web-app
-            chartPath: charts
-            valuesFiles:
-              - charts/values.yaml
+          - name: reactive-web-app-helm
+            chartPath: reactive-web-app-helm
             artifactOverrides:
-              imageKey: reactive-web-app
+              imageKey: gcr.io/basic-curve-316617/reactive-web-app-helm
+            valuesFiles:
+              - reactive-web-app-helm/values.yaml
             imageStrategy:
               helm: { }
   - name: kaniko

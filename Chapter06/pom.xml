@@ -82,9 +82,13 @@
 					<from>
 						<image>docker.io/adoptopenjdk/openjdk16:jre-16.0.1_9-alpine</image>
 					</from>
-					<!--<to>
-						<image>docker.io/hiashish/reactive-web-app</image>
-					</to>-->
+					<to>
+						<image>gcr.io/basic-curve-316617/reactive-web-app</image>
+					</to>
+					<!--Use it in case of helm-->
+					<!--					<to>
+                                            <image>gcr.io/basic-curve-316617/reactive-web-app-helm</image>
+                                        </to>-->
 				</configuration>
 			</plugin>
 		</plugins>

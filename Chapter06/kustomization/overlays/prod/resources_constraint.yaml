@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactive-web-app
+spec:
+  template:
+    spec:
+      containers:
+        - name: reactive-web-app
+          resources:
+            requests:
+              memory: 512Mi
+              cpu: 256m
+            limits:
+              memory: 1Gi
+              cpu: 512m
