@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: { { include "reactive-web-app-helm.fullname" . } }
+  labels:
+    { { - include "reactive-web-app-helm.labels" . | nindent 4 } }
+spec:
+  replicas: { { .Values.replicaCount } }
+  selector:
+    matchLabels:
+      { { - include "reactive-web-app-helm.selectorLabels" . | nindent 6 } }
+  template:
+    metadata:
+      labels:
+        { { - include "reactive-web-app-helm.selectorLabels" . | nindent 8 } }
+    spec:
+      containers:
+        - name: { { .Chart.Name } }
+          image: { { .Values.imageKey.repository } }:{{ .Values.imageKey.tag }}
+          imagePullPolicy: { { .Values.imageKey.pullPolicy } }
+          ports:
+            - name: http
+              containerPort: { { .Values.service.targetPort } }
+              protocol: TCP
