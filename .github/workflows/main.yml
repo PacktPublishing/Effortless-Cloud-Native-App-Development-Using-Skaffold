@@ -1,4 +1,4 @@
-name: Build Java project with Maven 
+name: build 
 on: 
   push: 
     branches: [ main ] 
