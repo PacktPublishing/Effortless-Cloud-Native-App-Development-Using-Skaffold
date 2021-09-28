@@ -1,4 +1,4 @@
-# Fearless Cross-Platform Development with Delphi
+# Effortless Cloud-Native App Development Using Skaffold
 
 <a href="https://www.packtpub.com/product/effortless-cloud-native-app-development-using-skaffold/9781801077118"><img src="https://static.packt-cdn.com/products/9781801077118/cover/smaller" alt="Fearless Cross-Platform Development with Delphi" height="256px" align="right"></a>
 
@@ -28,7 +28,6 @@ All of the code is organized into folders. For example, Chapter02.
 
 The code will look like the following:
 ```
-procedure TfrmPeopleList.lbPeopleClick(Sender: TObject);
 profiles:
    - name: userDefinedPortForward
    portForward:
@@ -38,18 +37,18 @@ profiles:
 	 resourceType: deployment
 ```
 
-**Following is what you need for this book:**
+**Who this book is for:**
 Cloud-native application developers, software engineers working with Kubernetes, and DevOps professionals who are looking for a solution to simplify and improve their software development life cycle will find this book useful. Beginner-level knowledge of Docker, Kubernetes, and the container ecosystem is required to get started with this book.
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-10).
 ### Software and Hardware List
-| Chapter | Software required | OS required |
-| -------- | ------------------------------------ | ----------------------------------- |
-| 1 | OpenJDK 16 | Windows,Mac OS and Linux |
-| 10 | Spring Boot 2.5| Windows,Mac OS and Linux|
-| 11 | Docker Desktop | macOS and Windows |
-| 12 | IntelliJ or Eclipse IDE |  macOS and Windows |
-| 12 | Skaffold CLI V29.0 or above |  macOS and Windows |
+| Software required | OS required |
+| ------------------------------------ | ----------------------------------- |
+| OpenJDK 16 | Windows,Mac OS and Linux |
+| Spring Boot 2.5| Windows,Mac OS and Linux|
+| Docker Desktop | macOS and Windows |
+| IntelliJ or Eclipse IDE |  macOS and Windows |
+| Skaffold CLI V29.0 or above |  Windows,Mac OS and Linux |
 
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781801077118_ColorImages.pdf).
