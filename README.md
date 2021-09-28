@@ -1,6 +1,6 @@
 # Effortless Cloud-Native App Development Using Skaffold
 
-<a href="https://www.packtpub.com/product/effortless-cloud-native-app-development-using-skaffold/9781801077118"><img src="https://static.packt-cdn.com/products/9781801077118/cover/smaller" alt="Fearless Cross-Platform Development with Delphi" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/product/effortless-cloud-native-app-development-using-skaffold/9781801077118"><img src="https://static.packt-cdn.com/products/9781801077118/cover/smaller" alt="Effortless Cloud-Native App Development Using Skaffold" height="256px" align="right"></a>
 
 This is the code repository for [Effortless Cloud-Native App Development using Skaffold](https://www.packtpub.com/product/effortless-cloud-native-app-development-using-skaffold/9781801077118), published by Packt.
 
