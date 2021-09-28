@@ -7,16 +7,28 @@ This is the code repository for [Effortless Cloud-Native App Development using S
 **Simplify the development and deployment of cloud-native Spring Boot applications on Kubernetes with Skaffold**
 
 ## What is this book about?
-Kubernetes has become the de facto standard for container orchestration, drastically improving how we deploy and manage cloud-native apps. Although it has simplified the lives of support professionals, we cannot say the same for developers who need to be equipped with better tools to increase productivity. An automated workflow that solves a wide variety of problems that every developer faces can make all the difference!. 
+Kubernetes has become the de facto standard for container orchestration, drastically improving how we deploy and manage cloud-native apps. Although it has simplified the lives of support professionals, we cannot say the same for developers who need to be equipped with better tools to increase productivity. An automated workflow that solves a wide variety of problems that every developer faces can make all the difference!.
 
-This book covers the following exciting features:
-Overcome challenges faced while working in an inner development loop using Skaffold
-Accelerate your development workflow using Skaffold
-Understand Skaffold's architecture, internal working, and supported CLI commands
-Build and deploy containers to Kubernetes using the Skaffold CLI and Cloud Code
-Deploy Spring Boot applications to fully managed Kubernetes services such as Google Kubernetes Engine using Skaffold
-Explore best practices for developing an app with Skaffold
-Avoid common pitfalls when developing cloud-native apps with Skaffold in Kubernetes
+Enter Skaffold – a command-line tool that automates the build, push, and deploy steps for Kubernetes applications.
+
+This book is divided into three parts, starting with common challenges encountered by developers in building apps with Kubernetes. The second part covers Skaffold features, its architecture, supported container image builders, and more. In the last part, you'll focus on practical implementation, learning how to deploy Spring Boot apps to cloud platforms such as Google Cloud Platform (GCP) using Skaffold. You'll also create CI/CD pipelines for your cloud-native apps with Skaffold. Although the examples covered in this book are written in Java and Spring Boot, the techniques can be applied to apps built using other technologies too.
+
+By the end of this Skaffold book, you'll develop skills that will help accelerate your inner development loop and be able to build and deploy your apps to the Kubernetes cluster with Skaffold.
+
+## This book covers the following exciting features:
+:bulb: Overcome challenges faced while working in an inner development loop using Skaffold
+
+:bulb: Accelerate your development workflow using Skaffold
+
+:open_book: Understand Skaffold's architecture, internal working, and supported CLI commands
+
+:hammer_and_wrench: Build and deploy containers to Kubernetes using the Skaffold CLI and Cloud Code
+
+:wheel_of_dharma: Deploy Spring Boot applications to fully managed Kubernetes services such as Google Kubernetes Engine using Skaffold
+
+:man_technologist: Explore best practices for developing an app with Skaffold
+
+:warning: Avoid common pitfalls when developing cloud-native apps with Skaffold in Kubernetes
 
 If you feel this book is for you, get your [copy](https://www.amazon.com/dp/B098KKF6RV) today!
 
