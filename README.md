@@ -75,6 +75,5 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 
 ## Get to Know the Author
-**Ashish Choudhary**
-Ashish Choudhary is a software engineer and has over 10 years of experience in the IT industry. He has experience in designing, developing, and deploying web applications. His technical expertise includes Java, Spring Boot, Docker, Kubernetes, IMDG, distributed systems, microservices, DevOps, the cloud, and the general software development life cycle. He is an active blogger and technical writer. He has delivered talks to some renowned conferences such as GitHub Satellite India and Fosdem. He is also a strong advocate of open source technologies. He has been contributing to various open source projects for quite some time. Ashish believes in continuous learning and knowledge sharing.
+**Ashish Choudhary** is a software engineer and has over 10 years of experience in the IT industry. He has experience in designing, developing, and deploying web applications. His technical expertise includes Java, Spring Boot, Docker, Kubernetes, IMDG, distributed systems, microservices, DevOps, the cloud, and the general software development life cycle. He is an active blogger and technical writer. He has delivered talks to some renowned conferences such as GitHub Satellite India and Fosdem. He is also a strong advocate of open source technologies. He has been contributing to various open source projects for quite some time. Ashish believes in continuous learning and knowledge sharing.
 
